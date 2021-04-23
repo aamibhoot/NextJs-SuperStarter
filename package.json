@@ -2,6 +2,7 @@
   "name": "nextjs-superset",
   "version": "1.0.0",
   "private": true,
+  "author": "Aami Bhoot",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

@@ -4,7 +4,13 @@
     <h1 align="center"> NextJs SuperStarter v1.0.0</h1>
   </a>
 </p>
-This is a super-duper go-to start your next awsome project with Next Js, Tailwind CSS and Headless Ui
+This is a super-duper go-to start your next awsome project with 
+
+- Next Js
+- Tailwind CSS
+- Headless Ui
+  
+ <h2 align="center"> Ships with Dark Mode 🎉</h2>
 
 ## TODOS
 - [x] Dark Mode
@@ -15,6 +21,6 @@ This is a super-duper go-to start your next awsome project with Next Js, Tailwin
 - [ ] Dynamic Titles
 - [ ] More cool things that idk yet
 
-<p align="center">
+<h2 align="center">
   Made in Bangladesh 🇧🇩
-</p>
+</h2>
