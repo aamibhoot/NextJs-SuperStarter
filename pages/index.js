@@ -1,65 +1,54 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import packageJson from "../package.json";
+import ThemeSwitch from "../componets/ThemeSwitch";
+import { useTheme } from "next-themes";
 
-export default function Home() {
+const version = packageJson.version;
+const dependencies = packageJson.dependencies;
+const devDependencies = packageJson.devDependencies;
+export default function index() {
+  const { theme } = useTheme();
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+    <div className="flex items-center font-thin justify-center w-full h-screen space-y-9 flex-col">
+      <h1 className="text-3xl">
+        🚀 NextJs SuperStarter{" "}
+        <sup className="bg-purple-700 text-xs font-mono text-white px-2">
+          <i>v{version}</i>
+        </sup>
+      </h1>
+      <div className="flex space-x-6">
+        <ThemeSwitch />
+        <div className="transition ease-in-out">
+          The current theme is:
+          <span className="transition ease-in-out animate-pulse"> {theme}</span>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+      </div>
+      <div className="flex space-x-2">
+        <p>
+          Next js{" "}
+          <i className="text-xs font-mono bg-green-600 text-gray-200 px-1">
+            {dependencies.next}
+          </i>
+        </p>
+        <p>
+          Tailwind CSS{" "}
+          <i className="text-xs font-mono bg-green-600 text-gray-200 px-1">
+            {devDependencies.tailwindcss}
+          </i>
+        </p>
+        <p>
+          Headless UI{" "}
+          <i className="text-xs font-mono bg-green-600 text-gray-200 px-1">
+            {dependencies["@headlessui/react"]}
+          </i>
+        </p>
+      </div>
+      <a
+        className="text-sm font-mono bg-blue-900 text-white py-3 px-5 rounded-full hover:bg-blue-800"
+        href="https://github.com/aamibhoot"
+        target="_blank"
+      >
+        👻 @aamibhoot
+      </a>
     </div>
-  )
+  );
 }
