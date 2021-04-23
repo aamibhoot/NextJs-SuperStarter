@@ -4,7 +4,7 @@
     <h1 align="center"> NextJs SuperStarter v1.0.0</h1>
   </a>
 </p>
-This is a super-duper go-to start your next awsome project with 
+This is a super-duper go-to start your next awesome project with 
 
 - Next Js
 - Tailwind CSS
