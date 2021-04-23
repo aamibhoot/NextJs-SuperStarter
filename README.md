@@ -12,6 +12,8 @@ This is a super-duper go-to start your next awsome project with
   
  <h2 align="center"> Ships with Dark Mode 🎉</h2>
 
+** Deployed App is not showing the switch 😩 **
+
 ## TODOS
 - [x] Dark Mode
 - [ ] Tailwind JIT
