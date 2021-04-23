@@ -49,6 +49,7 @@ export default function index() {
       >
         👻 @aamibhoot
       </a>
+      <span>Made in Bangladesh 🇧🇩</span>
     </div>
   );
 }

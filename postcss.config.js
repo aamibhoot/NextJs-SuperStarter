@@ -1,6 +1,6 @@
 module.exports = {
   plugins: [
-    // "@tailwindcss/jit",
+    // "@tailwindcss/jit" JIT still has some bugs,
     "tailwindcss",
     [
       "postcss-preset-env",
